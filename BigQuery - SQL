@@ -1,0 +1,17 @@
+SELECT
+    e.content_category AS categoria,
+    SUM(e.minutes_watched) AS total_minutos_assistidos
+FROM
+    `aulas-sql-fecap-496923.aulas.streaming_events` AS e
+INNER JOIN
+    `aulas-sql-fecap-496923.aulas.subscribers` AS s ON e.id_user = s.id_user
+WHERE
+    s.country = 'Brazil'
+GROUP BY
+    e.content_category
+ORDER BY
+    total_minutos_assistidos DESC
+LIMIT 5;
+
+
+--- especifico para aula --- 23/06/2026 ----
