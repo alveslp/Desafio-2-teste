@@ -10,5 +10,3 @@ Google BigQuery
 SQL (Standard SQL)
 
 Markdown (Documentação do Repositório)
-
-💻 Código SQL Final (tratamento_dados.sql)
